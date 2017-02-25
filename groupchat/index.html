@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GroupChat</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+
+    <div id="messages">
+      <ul class="list unstyle">
+        <li>
+          <table>
+            <tr>
+              <td colspan="2"><span class="time">10 minutes ago</span></td>
+            </tr>
+            <tr>
+              <td class="author">John</td>
+              <td class='chat'>A sample message</td>
+            </tr>
+            <tr>
+              <td colspan="2"><span class="time">10 minutes ago</span></td>
+            </tr>
+            <tr>
+              <td class="author">John</td>
+              <td class='chat'>A sample very very long message to see what happens</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+    </div>
+      <form action="#" id="comment-form">
+      <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell_hd"><label class="weui-label">Name</label></div>
+            <div class="weui-cell_bd">
+              <input class="weui-input" type="text" placeholder="Bob">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell_hd">
+              <label class="weui-label">Message</label>
+            </div>
+            <div class="weui-cell_bd">
+              <input class="weui-input" type="text" placeholder="Message">
+            </div>
+            <div class="weui-cell_ft">
+              <button class="weui-vcode-btn">Send</button>
+            </div>
+        </div>
+      </div>
+
+      </form>
+
+  </body>
+</html>

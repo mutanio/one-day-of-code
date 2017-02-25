@@ -25,7 +25,7 @@ Welcome 活动开场
 
 [Prototype link:](#) 
 
-`GrouChat is a one-page web app to communicate with your classmates within any browser (Weixin, Chrome...)`
+`GroupChat is a one-page web app to communicate with your classmates within any browser (Weixin, Chrome...)`
 
 - The list of messages are ordered by time
 - All visitors have the permissions to write and send messages
@@ -70,7 +70,7 @@ Welcome 活动开场
 - Integrate the Chat API on their own project
 
 
-###5:30/6:00PM
+###5:00/6:00PM
 **Back-end live-code 后端系统工作坊**
 
 - Ruby introduction
