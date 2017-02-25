@@ -23,7 +23,7 @@ Welcome 活动开场
 
 ####GroupChat app: specifications of the webapp we will code during the day!
 
-[Prototype link:](#) 
+[Prototype link:](https://mutanio.github.io/one-day-of-code/groupchat/) 
 
 `GroupChat is a one-page web app to communicate with your classmates within any browser (Weixin, Chrome...)`
 
