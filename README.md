@@ -6,12 +6,12 @@
 
 
 ###9:30AM
-Welcome 活动开场 
+Welcome 活动开场
 
 **Setup of the computers**
 
 - Installation of Sublime
-- Chrome
+- Chrome/Safari
 - VPN
 
 ###10:00AM/10:30AM
@@ -23,7 +23,7 @@ Welcome 活动开场
 
 ####GroupChat app: specifications of the webapp we will code during the day!
 
-[Prototype link:](https://mutanio.github.io/one-day-of-code/groupchat/) 
+[Prototype link](https://mutanio.github.io/one-day-of-code/groupchat/)
 
 `GroupChat is a one-page web app to communicate with your classmates within any browser (Weixin, Chrome...)`
 
@@ -31,7 +31,7 @@ Welcome 活动开场
 - All visitors have the permissions to write and send messages
 
 
-###10:30AM/12:00PM
+###10:30AM/1:00PM
 **Front-end workshop 前端开发工作坊**
 
 **=> 1.5 hour of lecture**
@@ -44,6 +44,7 @@ Welcome 活动开场
 
 - Code your own H5 WeChat page for the **GroupChat** app
 
+[Boilerplate repo](https://github.com/tgenaitay/one-day-of-code/)
 
 ###1:00/2:00PM
 **Lunch 午餐**

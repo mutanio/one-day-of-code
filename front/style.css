@@ -1,0 +1,114 @@
+/* basic rules */
+
+body {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  background-color: #F8F8F8;
+  margin: 0 auto;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+/* chats display */
+
+#comment-list {
+  height: 80%;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  text-align:center;
+}
+
+#comment-list table {
+  width: 70%;
+  text-align:center;
+  margin:0 auto;
+}
+
+#comment-list td {
+  padding: 10px 0px;
+}
+
+#comment-list .time {
+  padding:4px;
+  background-color: rgb(214, 214, 214);
+  color: white;
+  font-size: small;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#comment-list .author {
+  padding-right:5px;
+}
+
+#comment-list .chat {
+  background-color: white;
+  padding:8px;
+  border-radius:3px;
+  border: 1px solid #D9D9D9;
+  text-align:left;
+}
+
+/* comment form */
+
+
+#comment-form table {
+  width:100%;
+  background-color: #FFFFFF;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+#comment-form .sep {
+  border-top: 1px solid #D9D9D9;
+}
+
+#comment-form td {
+  margin-top: 1.15em;
+  line-height: 1.5;
+  padding: 10px 15px;
+}
+
+.weui-label {
+  display: block;
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.weui-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: 1.5em;
+  line-height: 1.5;
+}
+
+button.weui-btn {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  outline: 0;
+}
+
+.weui-btn {
+  display: inline-block;
+  height: 44px;
+  margin-left: 5px;
+  padding: 0 0.6em 0 0.7em;
+  border-left: 1px solid #E5E5E5;
+  line-height: 44px;
+  vertical-align: middle;
+  font-size: 17px;
+  color: #3CC51F;
+}
