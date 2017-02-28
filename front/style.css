@@ -8,14 +8,14 @@ body {
   margin: 0 auto;
 }
 
-ul{
+ul {
   list-style: none;
   padding:0;
 }
 
 /* chats display */
 
-#comment-list {
+#comments-list {
   height: 80%;
   width: 100%;
   border: 0;
@@ -23,17 +23,17 @@ ul{
   text-align:center;
 }
 
-#comment-list table {
-  width: 70%;
+#comments-list table {
+  width: 90%;
   text-align:center;
   margin:0 auto;
 }
 
-#comment-list td {
+#comments-list td {
   padding: 10px 0px;
 }
 
-#comment-list .time {
+#comments-list .time {
   padding:4px;
   background-color: rgb(214, 214, 214);
   color: white;
@@ -42,29 +42,30 @@ ul{
   border-radius: 3px;
 }
 
-#comment-list .author {
+#comments-list .author {
   padding-right:5px;
 }
 
-#comment-list .chat {
+#comments-list .chat {
   background-color: white;
   padding:8px;
   border-radius:3px;
   border: 1px solid #D9D9D9;
   text-align:left;
+  width: 80%;
 }
 
 /* comment form */
-
-
 #comment-form table {
   width:100%;
   background-color: #FFFFFF;
+  border-collapse: collapse;
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
 }
 
-#comment-form .sep {
+#comment-form tr:last-child td {
+  background-color: #FFFFFF;
   border-top: 1px solid #D9D9D9;
 }
 
@@ -103,11 +104,9 @@ button.weui-btn {
 
 .weui-btn {
   display: inline-block;
-  height: 44px;
-  margin-left: 5px;
+  text-align:center;
   padding: 0 0.6em 0 0.7em;
   border-left: 1px solid #E5E5E5;
-  line-height: 44px;
   vertical-align: middle;
   font-size: 17px;
   color: #3CC51F;
