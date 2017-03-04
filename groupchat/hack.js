@@ -69,7 +69,7 @@ function appendMessage(message) {
 };
 
 function getURL() {
-  var id = getParameterByName('id', window.location) || 888;
+  var id = getParameterByName('id') || 888;
 
   return 'https://wagon-chat.herokuapp.com/' + id + '/comments';
 }
