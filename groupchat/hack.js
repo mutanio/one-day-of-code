@@ -82,6 +82,8 @@ function loadMessages() {
   $.ajax({
     url: getURL(),
   }).done(function(messages) {
+    clearMessages();
+
     for (var i=0;i<messages.length;i++) {
       var message = messages[i];
       appendMessage(message);
@@ -90,11 +92,9 @@ function loadMessages() {
 };
 
 $('document').ready(function() {
-  clearMessages();
   loadMessages();
 
   window.setInterval(function() {
-    clearMessages();
     loadMessages();
   }, 5000);
 });
