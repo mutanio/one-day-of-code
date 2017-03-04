@@ -34,7 +34,7 @@ function createMessageAuthorData(message) {
 
 function createMessageContentData(message) {
   var td=document.createElement("td");
-  td.setAttribute('class', 'chat');
+  td.setAttribute('class', 'content');
   var content = document.createTextNode(message['content']);
   td.appendChild(content);
 
@@ -46,7 +46,7 @@ function appendMessage(message) {
   tr.appendChild(createMessageAuthorData(message));
   tr.appendChild(createMessageContentData(message));
 
-  var tbody = $('#messages .list.unstyle tbody')[0];
+  var tbody = $('#comments-list tbody')[0];
 
   tbody.appendChild(tr);
 };
@@ -70,7 +70,7 @@ function sendMessage(author, content, callback) {
 }
 
 function clearMessages() {
-  var tbody = $('#messages .list.unstyle tbody')[0];
+  var tbody = $('#comments-list tbody')[0];
 
   // http://stackoverflow.com/questions/683366/remove-all-the-children-dom-elements-in-div
   while (tbody.hasChildNodes()) {
