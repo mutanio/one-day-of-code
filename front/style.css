@@ -33,15 +33,6 @@ ul {
   padding: 10px 0px;
 }
 
-#comments-list .time {
-  padding:4px;
-  background-color: rgb(214, 214, 214);
-  color: white;
-  font-size: small;
-  text-align: center;
-  border-radius: 3px;
-}
-
 #comments-list .author {
   padding-right:5px;
 }
@@ -56,6 +47,7 @@ ul {
 }
 
 /* comment form */
+
 #comment-form table {
   width:100%;
   background-color: #FFFFFF;

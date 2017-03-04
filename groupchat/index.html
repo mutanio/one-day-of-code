@@ -6,55 +6,40 @@
 
     <title>GroupChat</title>
     <link rel="stylesheet" href="style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.js" type="text/javascript"></script>
+    <script src="https://lib.sinaapp.com/js/jquery/3.1.0/jquery-3.1.0.min.js"></script>
+
   </head>
   <body>
 
-    <div id="messages">
-      <ul class="list unstyle">
-        <li>
-          <table>
-            <tr>
-              <td colspan="2"><span class="time">10 minutes ago</span></td>
-            </tr>
-            <tr>
-              <td class="author">John</td>
-              <td class='chat'>A sample message</td>
-            </tr>
-            <tr>
-              <td colspan="2"><span class="time">10 minutes ago</span></td>
-            </tr>
-            <tr>
-              <td class="author">John</td>
-              <td class='chat'>A sample very very long message to see what happens</td>
-            </tr>
-          </table>
-        </li>
-      </ul>
+    <!-- chats -->
 
+    <div id="comments-list">
+      <table>
+        <tr>
+          <td class="author">John</td>
+          <td class='chat'>A sample message</td>
+        </tr>
+        <tr>
+          <td class="author">John</td>
+          <td class='chat'>A sample very very long message to see what happens</td>
+        </tr>
+      </table>
     </div>
-      <form action="#" id="comment-form">
-      <div class="weui-cells weui-cells_form">
-        <div class="weui-cell">
-            <div class="weui-cell_hd"><label class="weui-label">Name</label></div>
-            <div class="weui-cell_bd">
-              <input class="weui-input" type="text" placeholder="Bob">
-            </div>
-        </div>
-        <div class="weui-cell weui-cell_vcode">
-            <div class="weui-cell_hd">
-              <label class="weui-label">Message</label>
-            </div>
-            <div class="weui-cell_bd">
-              <input class="weui-input" type="text" placeholder="Message">
-            </div>
-            <div class="weui-cell_ft">
-              <button class="weui-vcode-btn">Send</button>
-            </div>
-        </div>
-      </div>
 
-      </form>
+    <!-- comment form -->
+    <form action="#" id="comment-form">
+      <table>
+        <tr>
+          <td width="105"><label class="weui-label">Name</label></td>
+          <td colspan="2"><input class="weui-input" type="text" placeholder="Bob"></td>
+        </tr>
+        <tr>
+          <td width="105"><label class="weui-label">Message</label></td>
+          <td><input class="weui-input" type="text" placeholder="Message"></td>
+          <td><button class="weui-btn">Send</button></td>
+        </tr>
+      </table>
+    </form>
 
     <script src="hack.js" type="text/javascript"></script>
   </body>

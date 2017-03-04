@@ -10,7 +10,9 @@ ul{
   padding:0;
 }
 
-.list {
+/* chats display */
+
+#comments-list {
   height: 80%;
   width: 100%;
   border: 0;
@@ -18,87 +20,48 @@ ul{
   text-align:center;
 }
 
-.list table {
-  width: 70%;
+#comments-list table {
+  width: 90%;
   text-align:center;
   margin:0 auto;
 }
 
-.list td {
+#comments-list td {
   padding: 10px 0px;
 }
 
-.list .time {
-  padding:4px;
-  background-color: rgb(214, 214, 214);
-  color: white;
-  font-size: small;
-  text-align: center;
-  border-radius: 3px;
-}
-
-.list .author {
+#comments-list .author {
   padding-right:5px;
 }
 
-.list .chat {
+#comments-list .chat {
   background-color: white;
   padding:8px;
   border-radius:3px;
   border: 1px solid #D9D9D9;
   text-align:left;
+  width: 80%;
 }
 
-.weui-cells_title {
-  margin-top: .77em;
-  margin-bottom: .3em;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #999999;
-  font-size: 14px;
-}
+/* comment form */
 
-.weui-cells {
-  margin-top: 0;
-}
-
-.weui-cell {
-  padding: 10px 15px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.weui-cell:before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 1px;
+#comment-form table {
+  width:100%;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
   border-top: 1px solid #D9D9D9;
-  color: #D9D9D9;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
-  left: 15px;
+  border-bottom: 1px solid #D9D9D9;
 }
 
-.weui-cell_vcode {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
+#comment-form tr:last-child td {
+  background-color: #FFFFFF;
+  border-top: 1px solid #D9D9D9;
 }
 
-.weui-cell_bd {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+#comment-form td {
+  margin-top: 1.15em;
+  line-height: 1.5;
+  padding: 10px 15px;
 }
 
 .weui-label {
@@ -116,55 +79,11 @@ ul{
   background-color: transparent;
   font-size: inherit;
   color: inherit;
-  height: 1.41176471em;
-  line-height: 1.41176471;
+  height: 1.5em;
+  line-height: 1.5;
 }
 
-.weui-cells {
-  margin-top: 1.17647059em;
-  background-color: #FFFFFF;
-  line-height: 1.41176471;
-  font-size: 17px;
-  overflow: hidden;
-  position: relative;
-}
-
-.weui-cells:before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 1px;
-  border-top: 1px solid #D9D9D9;
-  color: #D9D9D9;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
-}
-
-.weui-cells:after {
-  content: " ";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 1px;
-  border-bottom: 1px solid #D9D9D9;
-  color: #D9D9D9;
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
-}
-
-.weui-cell_ft {
-  text-align: right;
-  color: #999999;
-}
-
-button.weui-vcode-btn {
+button.weui-btn {
   background-color: transparent;
   border-top: 0;
   border-right: 0;
@@ -172,13 +91,11 @@ button.weui-vcode-btn {
   outline: 0;
 }
 
-.weui-vcode-btn {
+.weui-btn {
   display: inline-block;
-  height: 44px;
-  margin-left: 5px;
+  text-align:center;
   padding: 0 0.6em 0 0.7em;
   border-left: 1px solid #E5E5E5;
-  line-height: 44px;
   vertical-align: middle;
   font-size: 17px;
   color: #3CC51F;
