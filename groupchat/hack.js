@@ -112,11 +112,11 @@ $('document').ready(function() {
 
 
 $('.weui-vcode-btn').click(function() {
-  var author = $('.weui-input')[0].value;
-  var message = $('.weui-input')[1].value;
+  var authorField = $('.weui-input')[0];
+  var contentField = $('.weui-input')[1];
 
-  sendMessage(author, message, function(message) {
+  sendMessage(authorField.value, contentField.value, function(message) {
     appendMessage(message);
-    message.value = '';
+    contentField.value = '';
   });
 });
