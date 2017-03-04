@@ -1,14 +1,15 @@
+//////////////////////////// begin helper methods ///////////////////////////////
+//
+// inject jQuery directly into webpage
+//
 // http://stackoverflow.com/questions/8508514/how-to-run-jquery-directly-on-any-page-in-the-browser
-
+//
 // (function(){var jQueryVersion="1";var a=document.createElement("script");a.src="//ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.js";a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);})()
-
-// var jQueryVersion="1";
-// var a=document.createElement("script");
-// a.src="//ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.js";
-// a.type="text/javascript";
-// document.getElementsByTagName("head")[0].appendChild(a);
-
+//
+// extract query from path
+//
 // http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+//
 function getParameterByName(name, url) {
     if (!url) {
       url = window.location.href;
@@ -20,20 +21,7 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-
-function createMessageTimeRow(message) {
-  var tr=document.createElement("tr");
-  var td=document.createElement("td");
-  td.setAttribute('colspan', '2');
-  var span = document.createElement('span');
-  span.setAttribute('class', 'time');
-  var timeAgo = document.createTextNode(message['created_at']);
-  span.appendChild(timeAgo);
-  td.appendChild(span);
-  tr.appendChild(td);
-
-  return tr;
-}
+//////////////////////////// end helper methods ///////////////////////////////
 
 function createMessageAuthorData(message) {
   var td=document.createElement("td");
@@ -53,19 +41,14 @@ function createMessageContentData(message) {
   return td;
 }
 
-function createMessageBodyRow(message) {
+function appendMessage(message) {
   var tr=document.createElement("tr");
   tr.appendChild(createMessageAuthorData(message));
   tr.appendChild(createMessageContentData(message));
 
-  return tr;
-}
-
-function appendMessage(message) {
   var tbody = $('#messages .list.unstyle tbody')[0];
 
-  tbody.appendChild(createMessageTimeRow(message));
-  tbody.appendChild(createMessageBodyRow(message));
+  tbody.appendChild(tr);
 };
 
 function getURL() {
