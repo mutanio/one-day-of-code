@@ -1,6 +1,6 @@
 // http://stackoverflow.com/questions/8508514/how-to-run-jquery-directly-on-any-page-in-the-browser
 
-(function(){var jQueryVersion="1";var a=document.createElement("script");a.src="//ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.js";a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);})()
+// (function(){var jQueryVersion="1";var a=document.createElement("script");a.src="//ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.js";a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);})()
 
 // var jQueryVersion="1";
 // var a=document.createElement("script");
