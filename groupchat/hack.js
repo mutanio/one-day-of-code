@@ -34,7 +34,7 @@ function createMessageAuthorData(message) {
 
 function createMessageContentData(message) {
   var td=document.createElement("td");
-  td.setAttribute('class', 'chat');
+  td.setAttribute('class', 'content');
   var content = document.createTextNode(message['content']);
   td.appendChild(content);
 
