@@ -92,6 +92,11 @@ function loadMessages() {
 $('document').ready(function() {
   clearMessages();
   loadMessages();
+
+  window.setInterval(function() {
+    clearMessages();
+    loadMessages();
+  }, 5000);
 });
 
 $('#comment-form').submit(function(event) {
