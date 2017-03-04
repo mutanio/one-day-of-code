@@ -72,6 +72,7 @@ function getURL() {
   var id = getParameterByName('id') || 888;
 
   return 'https://wagon-chat.herokuapp.com/' + id + '/comments';
+  // return 'http://localhost:9393/messages';
 }
 
 function sendMessage(author, content, callback) {
@@ -110,8 +111,7 @@ $('document').ready(function() {
   loadMessages();
 });
 
-
-$('.weui-vcode-btn').click(function() {
+$('#comment-form').submit(function(event) {
   var authorField = $('.weui-input')[0];
   var contentField = $('.weui-input')[1];
 
@@ -119,4 +119,6 @@ $('.weui-vcode-btn').click(function() {
     appendMessage(message);
     contentField.value = '';
   });
+
+  event.preventDefault();
 });
