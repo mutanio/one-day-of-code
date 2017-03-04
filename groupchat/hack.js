@@ -8,6 +8,19 @@
 // a.type="text/javascript";
 // document.getElementsByTagName("head")[0].appendChild(a);
 
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function createMessageTimeRow(message) {
   var tr=document.createElement("tr");
   var td=document.createElement("td");
@@ -53,12 +66,18 @@ function appendMessage(message) {
 
   tbody.appendChild(createMessageTimeRow(message));
   tbody.appendChild(createMessageBodyRow(message));
+};
+
+function getURL() {
+  var id = getParameterByName('id', window.location) || 888;
+
+  return 'https://wagon-chat.herokuapp.com/' + id + '/comments';
 }
 
 function sendMessage(author, content, callback) {
   $.ajax({
   method: 'POST',
-  url: 'https://wagon-chat.herokuapp.com/767609/comments',
+  url: getURL(),
   data: {
     author: author,
     content: content
@@ -77,7 +96,7 @@ function clearMessages() {
 
 function loadMessages() {
   $.ajax({
-    url: 'https://wagon-chat.herokuapp.com/767609/comments'
+    url: getURL(),
   }).done(function(messages) {
     for (var i=0;i<messages.length;i++) {
       var message = messages[i];
