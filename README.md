@@ -44,7 +44,7 @@ Welcome 活动开场
 
 - Code your own H5 WeChat page for the **GroupChat** app
 
-[Boilerplate repo](https://github.com/tgenaitay/one-day-of-code/)
+[Boilerplate repo](https://mutanio.github.io/one-day-of-code/front/)
 
 ###1:00/2:00PM
 **Lunch 午餐**
