@@ -61,7 +61,7 @@ function appendMessage(message) {
 // we are able to change the room ID with this `?id=xxx` syntax
 // https://mutanio.github.io/one-day-of-code/groupchat/?id=9000
 function getURL() {
-  var id = getParameterByName('id') || 20460305;
+  var id = getParameterByName('id') || 888;
 
   return 'https://wagon-chat.herokuapp.com/' + id + '/comments';
 }
@@ -107,11 +107,13 @@ function loadMessages() {
 $('document').ready(function() {
   // TODO:
   // call the function to load messages from the server
+  loadMessages();
 
   window.setInterval(function() {
     // TODO:
     // call the function to reload messages again
     // just to ensure we are not missing new messages from others!
+    loadMessages();
   }, 5000);
 });
 
@@ -127,5 +129,5 @@ $('#comment-form').submit(function(event) {
   // TODO:
   // uncomment of this code
   // think and then ask teacher: why we need to `preventDefault()`?
-  // event.preventDefault();
+  event.preventDefault();
 });
