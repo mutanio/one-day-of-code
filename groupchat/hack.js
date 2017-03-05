@@ -6,7 +6,10 @@
 //
 // (function(){var jQueryVersion="1";var a=document.createElement("script");a.src="//ajax.googleapis.com/ajax/libs/jquery/"+jQueryVersion+"/jquery.js";a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);})()
 //
-// extract query from path
+// **** extract query from path ****
+//
+// TO STUDENTS:
+// don't worry, you don't need to understand this!
 //
 // http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 //
@@ -23,6 +26,7 @@ function getParameterByName(name, url) {
 }
 //////////////////////////// end helper methods ///////////////////////////////
 
+// DOM manipulations...
 function createMessageAuthorElement(message) {
   var td=document.createElement("td");
   td.setAttribute('class', 'author');
@@ -32,6 +36,7 @@ function createMessageAuthorElement(message) {
   return td;
 }
 
+// DOM manipulations...
 function createMessageContentElement(message) {
   var td=document.createElement("td");
   td.setAttribute('class', 'content');
@@ -41,6 +46,7 @@ function createMessageContentElement(message) {
   return td;
 }
 
+// DOM manipulations...
 function appendMessage(message) {
   var tr=document.createElement("tr");
   tr.appendChild(createMessageAuthorElement(message));
@@ -51,6 +57,9 @@ function appendMessage(message) {
   tbody.appendChild(tr);
 };
 
+// with this getParameterByName helper method,
+// we are able to change the room ID with this `?id=xxx` syntax
+// https://mutanio.github.io/one-day-of-code/groupchat/?id=9000
 function getURL() {
   var id = getParameterByName('id') || 888;
 
@@ -68,6 +77,7 @@ function sendMessage(author, content, callback) {
   }).done(callback);
 }
 
+// remove all existing messages from the HTML!
 function clearMessages() {
   var tbody = $('#comments-list tbody')[0];
 
@@ -77,12 +87,16 @@ function clearMessages() {
   }
 }
 
+// load messages from Le Wagon Chat API!
+// https://wagon-chat.herokuapp.com/20170305/comments
 function loadMessages() {
   $.ajax({
     url: getURL(),
   }).done(function(messages) {
+    // first we remove all message rows!
     clearMessages();
 
+    // then for each message, we append a `tr`!
     for (var i=0;i<messages.length;i++) {
       var message = messages[i];
       appendMessage(message);
@@ -97,7 +111,7 @@ $('document').ready(function() {
 
   window.setInterval(function() {
     // TODO:
-    // call the function to load messages again
+    // call the function to reload messages again
     // just to ensure we are not missing new messages from others!
     loadMessages();
   }, 5000);
