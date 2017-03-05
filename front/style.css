@@ -13,14 +13,18 @@ ul {
   padding:0;
 }
 
+h1, h2, h3 {
+  margin:20px;
+}
+
 /* chats display */
 
 #comments-list {
-  height: 80%;
   width: 100%;
   border: 0;
   outline: 0;
   text-align:center;
+  margin-bottom: 50px;
 }
 
 #comments-list table {
