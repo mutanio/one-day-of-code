@@ -23,7 +23,7 @@ function getParameterByName(name, url) {
 }
 //////////////////////////// end helper methods ///////////////////////////////
 
-function createMessageAuthorData(message) {
+function createMessageAuthorElement(message) {
   var td=document.createElement("td");
   td.setAttribute('class', 'author');
   var author = document.createTextNode(message['author']);
@@ -32,7 +32,7 @@ function createMessageAuthorData(message) {
   return td;
 }
 
-function createMessageContentData(message) {
+function createMessageContentElement(message) {
   var td=document.createElement("td");
   td.setAttribute('class', 'content');
   var content = document.createTextNode(message['content']);
@@ -43,8 +43,8 @@ function createMessageContentData(message) {
 
 function appendMessage(message) {
   var tr=document.createElement("tr");
-  tr.appendChild(createMessageAuthorData(message));
-  tr.appendChild(createMessageContentData(message));
+  tr.appendChild(createMessageAuthorElement(message));
+  tr.appendChild(createMessageContentElement(message));
 
   var tbody = $('#comments-list tbody')[0];
 
@@ -55,7 +55,6 @@ function getURL() {
   var id = getParameterByName('id') || 888;
 
   return 'https://wagon-chat.herokuapp.com/' + id + '/comments';
-  // return 'http://localhost:9393/messages';
 }
 
 function sendMessage(author, content, callback) {
@@ -92,21 +91,29 @@ function loadMessages() {
 };
 
 $('document').ready(function() {
+  // TODO:
+  // call the function to load messages from the server
   loadMessages();
 
   window.setInterval(function() {
+    // TODO:
+    // call the function to load messages again
+    // just to ensure we are not missing new messages from others!
     loadMessages();
   }, 5000);
 });
 
 $('#comment-form').submit(function(event) {
-  var authorField = $('.weui-input')[0];
-  var contentField = $('.weui-input')[1];
+  var authorField = $('#input-name')[0];
+  var contentField = $('#input-content')[0];
 
   sendMessage(authorField.value, contentField.value, function(message) {
     appendMessage(message);
     contentField.value = '';
   });
 
+  // TODO:
+  // uncomment of this code
+  // think and then ask teacher: why we need to `preventDefault()`?
   event.preventDefault();
 });
